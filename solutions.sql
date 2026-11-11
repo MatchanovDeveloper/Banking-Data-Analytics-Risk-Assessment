@@ -238,6 +238,7 @@ SELECT
 	loan_type,
 	SUM(loan_amount_uzs) AS jami_summa,
 	ROUND(AVG(interest_rate), 2) AS ortacha_foiz_stavkasi,
+	COUNT(*) AS shartnomalar_soni,
 	ROUND(
 		100.0 * COUNT(CASE WHEN status = 'Muddati o''tgan' THEN 1 END) / COUNT(*),
 		2
